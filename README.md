@@ -147,7 +147,6 @@ The aim of the project is to train an Artificial Neural Network (ANN) to detect 
 
 ### Dataset
 #### Dataset analysis
-This section should contain a quantitative and qualitative description of the dataset. It should include images, charts and other visualizations.
 
 As mentioned earlier, the dataset comes from the Waymo Open Dataset. It's the view of a front camera in a moving car recorded in various traffic, weather and lighting conditions. For the purpose of becoming familiar with the dataset an exploratory data analysis was conducted. Examples are found under the following link: [EDA](/Exploratory%20Data%20Analysis.ipynb). 
 
