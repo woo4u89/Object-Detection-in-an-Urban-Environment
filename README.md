@@ -166,7 +166,6 @@ The dataset consists of 99 tfrecord files. The images were shuffled and divided 
 
 ### Training
 #### Reference experiment
-This section should detail the results of the reference experiment. It should includes training metrics and a detailed explanation of the algorithm's performances.
 
 Training and validation was performed for the reference model. 
 The follwing results can be seen:
