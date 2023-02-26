@@ -153,11 +153,18 @@ As mentioned earlier, the dataset comes from the Waymo Open Dataset. It's the vi
 The training set contains 29710 car, 8355 pedestrian and 214 cyclist objects.
 ![](img/pie_chart.PNG)
 
-Example images with visible ground truth boxes can be seen below:
-![](img/data1.png)
-![](img/data2.png)
-![](img/data3.png)
+Example images with visible ground truth boxes can be seen below.
 
+- examples of poor visibility due to rain, or fog. Water droplets are also present on the camera lense, which limits the visibility and distorts objects. 
+![](img/data_1.png)
+- examples during night time. Less light makes it more difficult to properly classify objects. 
+![](img/data_2.png)
+- examples of different types of four wheel vehicles that need to be indentified, some vehicles are also partially visible on the camera.
+![](img/data_3.png)
+- examples of different traffic conditions - images from a highway and city traffic. A varying density of cars, pedestrians and cyclists is to be exepcted in such enviroments, as well as varying weather conditions. One image shows a very sunny day. 
+![](img/data_4.png)
+- other examples showing pedestrian crossings at different times of day and car traffic. 
+![](img/data_5.png)
 
 #### Cross validation
 
