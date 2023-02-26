@@ -236,7 +236,7 @@ learning rate base was set to 0.004. Since the model is overfitting additional a
 
 - loss metrics: 
 
-![](experiments/experiment0/Loss.png)
+![](experiments/experiment0/Loss.PNG)
 
 The results are an improvement over the reference model. The mAP improved from 0.0003101 to 0.078. Regularization loss:0.26, total loss: 1.02. It can be seen the model is also slightly overfitting. 
 
