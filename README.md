@@ -195,11 +195,15 @@ Overall, it can be seen that the total loss is equal to the value 8.4. This resu
 #### Improve on the reference
 
 Three experiments were conducted with different setting - for the optimizer as well as for the amount of image augmentations. A summary is shown below:
+
 ![](img/Comparison.PNG)
 
 Examples of augmentations (change of saturnation, brightness and contrast) for experiment 0:
+
 ![](img/augm_1.png)
+
 Examples of augmentations (augmentations of experiment 0 + "random_black_patches") for experiment 1 & 2:
+
 ![](img/augm_2.png)
 
 Examples of augmentations can be seen also in the Jupyter notebook: 
