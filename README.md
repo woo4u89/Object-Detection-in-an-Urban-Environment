@@ -155,15 +155,24 @@ The training set contains 29710 car, 8355 pedestrian and 214 cyclist objects.
 
 Example images with visible ground truth boxes can be seen below.
 
-- examples of poor visibility due to rain, or fog. Water droplets are also present on the camera lense, which limits the visibility and distorts objects. 
+- examples of poor visibility due to rain, or fog. Water droplets are also present on the camera lense, which limits the visibility and distorts objects:
+ 
 ![](img/data_1.png)
-- examples during night time. Less light makes it more difficult to properly classify objects. 
+
+- examples during night time. Less light makes it more difficult to properly classify objects:
+
 ![](img/data_2.png)
-- examples of different types of four wheel vehicles that need to be indentified, some vehicles are also partially visible on the camera.
+
+- examples of different types of four wheel vehicles that need to be indentified, some vehicles are also partially visible on the camera:
+
 ![](img/data_3.png)
-- examples of different traffic conditions - images from a highway and city traffic. A varying density of cars, pedestrians and cyclists is to be exepcted in such enviroments, as well as varying weather conditions. One image shows a very sunny day. 
+
+- examples of different traffic conditions - images from a highway and city traffic. A varying density of cars, pedestrians and cyclists is to be exepcted in such enviroments, as well as varying weather conditions. One of the images shows a very sunny day:
+
 ![](img/data_4.png)
-- other examples showing pedestrian crossings at different times of day and car traffic. 
+
+- other examples showing pedestrian crossings at different times of day and car traffic:
+
 ![](img/data_5.png)
 
 #### Cross validation
@@ -188,7 +197,12 @@ Overall, it can be seen that the total loss is equal to the value 8.4. This resu
 Three experiments were conducted with different setting - for the optimizer as well as for the amount of image augmentations. A summary is shown below:
 ![](img/Comparison.PNG)
 
-Examples of augmentations can be seen here: 
+Examples of augmentations (change of saturnation, brightness and contrast) for experiment 0:
+![](img/augm_1.PNG)
+Examples of augmentations (augmentations of experiment 0 + "random_black_patches") for experiment 1 & 2:
+![](img/augm_2.PNG)
+
+Examples of augmentations can be seen also in the Jupyter notebook: 
 [Explore augmentations](/Explore%20augmentations.ipynb)
 
 The reference model was run several times, in one instance the total loss was growing at a very high rate with each iteration step and it did not converge. On another attempt high loss was visible at the beginning of the training. Therefore, the warmup learning rate was decreased to 0.002 and the 
