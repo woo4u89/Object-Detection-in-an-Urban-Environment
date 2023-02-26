@@ -184,12 +184,22 @@ The dataset consists of 99 tfrecord files. The images were shuffled and divided 
 #### Reference experiment
 
 Training and validation was performed for the reference model. 
-The follwing results can be seen:
+The following results can be seen:
+- average precision metrics:
+
+![](experiments/reference/AP.PNG)
+
+- recall metrics:
+
+![](experiments/reference/Recall.PNG)
+
+- loss metrics: 
+
 ![](experiments/reference/3.png)
 
 For the 2500 training steps it can be seen that the model is slighly overfitting the training data (the blue dot is the validation result, which is above the orange line representing the training data). For the reference model the following image augmentation options were used: random crop and random horizontal flip. 
 
-Overall, it can be seen that the total loss is equal to the value 8.4. This result can be improved by testing different augmentation options and optimizer options. However, another limiting factor in the training is the amount of available space in the workspace, therefore the training is limited to 2500 steps. Theoretically increasing the amount of steps might improve the results.  
+Overall, it can be seen that the total loss is equal to the value 8.4, regularization loss: 6.83. The mean Average Precision (mAP) is equal to 0.0003101. The Recall values are also very small. These results are not good. This result can be improved by testing different augmentation options and optimizer options. However, another limiting factor in the training is the amount of available space in the workspace, therefore the training is limited to 2500 steps. 
 
 
 #### Improve on the reference
