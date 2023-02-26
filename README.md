@@ -223,7 +223,7 @@ learning rate base was set to 0.004.
 
  Additional image augmentations were added to each of the three models as can be seen in the above table. 
  
- For experiment0 a more basic set was chosen. The momentum optimizer was used just as in the reference model, but to achieve better convergence the learning rate and warmup rate were decreased to 0.004 and 0.002 respectively. 
+ For experiment0 a more basic set of augmentations was chosen. The momentum optimizer was used just as in the reference model, but to achieve better convergence the learning rate and warmup rate were decreased to 0.004 and 0.002 respectively. 
 
  The following results can be seen in TensorBoard: 
 - average precision metrics:
