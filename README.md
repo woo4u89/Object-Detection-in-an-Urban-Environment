@@ -244,7 +244,7 @@ Another experiment was done to check if adding another type of augmentation woul
 
 The last experiment was done to check if the results might improve by picking another optimizer. For the same augmentations as for experiment1 a different optimizer was chosen. Instead of the momentum optimizer the learning is done using the adam optimizer. The results were even worse than in the case of experiment 1, mAP =6.44e-5, regularization loss: 1.08, total loss: 2.92. 
  
-The experiments were concluded with the conclusion that experiment0 gives the best results. For the limited amount of learning steps available it can be seen that addidng further augmentations only worsens the results, the change of the optimizer similarly worsened the results.  
+The experiments were finished with the conclusion that experiment0 gives the best results. For the limited amount of learning steps available it can be seen that addidng further augmentations only worsens the results, the change of the optimizer similarly worsened the results.  
 
 Experiment0 model was chosen to generate the animations for three test TF records. 
 
