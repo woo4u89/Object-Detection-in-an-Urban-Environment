@@ -219,7 +219,7 @@ Examples of augmentations can be seen also in the Jupyter notebook:
 [Explore augmentations](/Explore%20augmentations.ipynb)
 
 The reference model was run several times, in one instance the total loss was growing at a very high rate with each iteration step and it did not converge. On another attempt high loss was visible at the beginning of the training. Therefore, the warmup learning rate was decreased to 0.002 and the 
-learning rate base was set to 0.004. 
+learning rate base was set to 0.004. Since the model is overfitting additional augmentations were chosen to decrease the overfitting. 
 
  Additional image augmentations were added to each of the three models as can be seen in the above table. 
  
