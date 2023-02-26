@@ -240,7 +240,7 @@ learning rate base was set to 0.004. Since the model is overfitting additional a
 
 The results are an improvement over the reference model. The mAP improved from 0.0003101 to 0.078. Regularization loss:0.26, total loss: 1.02. It can be seen the model is also slightly overfitting. 
 
-Another experiment was done to check if adding another type of augmentation would improve the results. A "random black patches" augmentation was added, which mimics the way water droplets can limit the camera view of the environment. The results were however worse than for experiment 0. The mAP was equal to: 0,00157, regularization loss: 0.73, total loss: 2.35.
+Another experiment was done to check if adding another type of augmentation would improve the overfitting results. A "random black patches" augmentation was added, which mimics the way water droplets can limit the camera view of the environment. The results were however worse than for experiment 0. The mAP was equal to: 0,00157, regularization loss: 0.73, total loss: 2.35. The model was also overfitting. 
 
 The last experiment was done to check if the results might improve by picking another optimizer. For the same augmentations as for experiment1 a different optimizer was chosen. Instead of the momentum optimizer the learning is done using the adam optimizer. The results were even worse than in the case of experiment 1, mAP =6.44e-5, regularization loss: 1.08, total loss: 2.92. 
  
