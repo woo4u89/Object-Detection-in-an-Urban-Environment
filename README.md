@@ -209,11 +209,11 @@ Three experiments were conducted with different setting - for the optimizer as w
 
 Examples of augmentations (change of saturnation, brightness and contrast) for experiment 0:
 
-![](img/augm_1.PNG)
+![](img/augm_1.png)
 
 Examples of augmentations (augmentations of experiment 0 + "random_black_patches") for experiment 1 & 2:
 
-![](img/augm_2.PNG)
+![](img/augm_2.png)
 
 Examples of augmentations can be seen also in the Jupyter notebook: 
 [Explore augmentations](/Explore%20augmentations.ipynb)
