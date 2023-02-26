@@ -205,25 +205,43 @@ Overall, it can be seen that the total loss is equal to the value 8.4, regulariz
 #### Improve on the reference
 
 Three experiments were conducted with different setting - for the optimizer as well as for the amount of image augmentations. A summary is shown below:
-
 ![](img/Comparison.PNG)
 
 Examples of augmentations (change of saturnation, brightness and contrast) for experiment 0:
-
-![](img/augm_1.png)
-
+![](img/augm_1.PNG)
 Examples of augmentations (augmentations of experiment 0 + "random_black_patches") for experiment 1 & 2:
-
-![](img/augm_2.png)
+![](img/augm_2.PNG)
 
 Examples of augmentations can be seen also in the Jupyter notebook: 
 [Explore augmentations](/Explore%20augmentations.ipynb)
 
 The reference model was run several times, in one instance the total loss was growing at a very high rate with each iteration step and it did not converge. On another attempt high loss was visible at the beginning of the training. Therefore, the warmup learning rate was decreased to 0.002 and the 
 learning rate base was set to 0.004. 
- Additional image augmentations were added to each of the three models. For experiment0 a more basic set was chosen. Experiment1 and experiment2 have an additional "random black patches" augmentation. To further experiment on the accuracy of the results a different optimizer was chosen for experiment2, the adam optimizer was chosen instead of the momentum optimizer. 
- 	For the limited amount of learning steps available the experiment0 model gave the best results - the lowest total loss value was observed for this model. Experiment0 model was chosen to generate the animations for three test TF records. 
- 	![](experiments/experiment0/2.png)
-A possible improvement of the model results would be to increase the amount of learning steps. 
 
+ Additional image augmentations were added to each of the three models as can be seen in the above table. 
+ 
+ For experiment0 a more basic set was chosen. The momentum optimizer was used just as in the reference model, but to achieve better convergence the learning rate and warmup rate were decreased to 0.004 and 0.002 respectively. 
+
+ The following results can be seen in TensorBoard: 
+- average precision metrics:
+
+![](experiments/experiment0/AR.PNG)
+
+- recall metrics:
+
+![](experiments/experiment0/Recall.PNG)
+
+- loss metrics: 
+
+![](experiments/experiment0/Loss.png)
+
+The results are an improvement over the reference model. The mAP improved from 0.0003101 to 0.078. Regularization loss:0.26, total loss: 1.02. It can be seen the model is also slightly overfitting. 
+
+Another experiment was done to check if adding another type of augmentation would improve the results. A "random black patches" augmentation was added, which mimics the way water droplets can limit the camera view of the environment. The results were however worse than for experiment 0. The mAP was equal to: 0,00157, regularization loss: 0.73, total loss: 2.35.
+
+The last experiment was done to check if the results might improve by picking another optimizer. For the same augmentations as for experiment1 a different optimizer was chosen. Instead of the momentum optimizer the learning is done using the adam optimizer. The results were even worse than in the case of experiment 1, mAP =6.44e-5, regularization loss: 1.08, total loss: 2.92. 
+ 
+The experiments were concluded with the conclusion that experiment0 gives the best results. For the limited amount of learning steps available it can be seen that addidng further augmentations only worsens the results, the change of the optimizer similarly worsened the results.  
+
+Experiment0 model was chosen to generate the animations for three test TF records. 
 
